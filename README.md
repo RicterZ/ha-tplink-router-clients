@@ -2,9 +2,6 @@
 
 A Home Assistant custom integration that displays online TP-Link router clients, sorted by download speed.
 
-> [!WARNING]
-> TLS certificate verification is disabled because the target router setup does not provide a certificate chain trusted by Python. Use this integration only with a router you trust.
-
 ## Quick start
 
 1. Copy `custom_components/tplink_router_clients` into Home Assistant's `custom_components` directory.
