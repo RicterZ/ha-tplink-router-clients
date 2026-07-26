@@ -1,0 +1,38 @@
+{
+  "title": "TP-Link Router Clients",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to router",
+        "description": "Enter the router connection and display settings.",
+        "data": {
+          "host": "Host or IP",
+          "username": "Username",
+          "password": "Password",
+          "scan_interval": "Update interval",
+          "card_mode": "Card layout",
+          "columns": "Displayed columns"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Cannot connect or log in"
+    },
+    "abort": {
+      "already_configured": "This router is already configured"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Router client options",
+        "data": {
+          "scan_interval": "Update interval",
+          "card_mode": "Card layout",
+          "columns": "Displayed columns"
+        }
+      }
+    }
+  }
+}
+
