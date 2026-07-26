@@ -28,7 +28,7 @@ class TPLinkRouterClientsCard extends HTMLElement {
           `<tr>${columns.map(column => `<td>${escapeHtml(displayValue(client, column))}</td>`).join("")}</tr>`
         ).join("")}</tbody></table>`;
 
-    this.innerHTML = `<ha-card header="${escapeHtml(this.config.title || "Router clients")}">
+    this.innerHTML = `<ha-card>
       <style>
         .content { padding: 0 16px 16px; overflow-x: auto; }
         table { border-collapse: collapse; width: 100%; }

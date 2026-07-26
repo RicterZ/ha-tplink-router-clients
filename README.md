@@ -21,7 +21,6 @@ The integration loads the bundled card automatically. Add a manual card:
 ```yaml
 type: custom:tplink-router-clients-card
 entity: sensor.tp_link_router_clients_online_clients
-title: Router clients
 ```
 
 If Home Assistant generated a different entity ID, select the integration's **Online clients** sensor and use that ID instead.
