@@ -9,7 +9,7 @@ from .coordinator import RouterCoordinator
 
 PLATFORMS = [Platform.SENSOR]
 CARD_PATH = "/tplink_router_clients/tplink-router-clients-card.js"
-CARD_URL = f"{CARD_PATH}?v=0.1.1"
+CARD_URL = f"{CARD_PATH}?v=0.1.2"
 
 
 async def async_setup(hass, config):

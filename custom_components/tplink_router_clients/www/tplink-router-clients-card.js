@@ -1,4 +1,7 @@
-const LABELS = { name: "Device", mac: "MAC", ip: "IP", up: "Up KB/s", down: "Down KB/s" };
+const LABELS = { name: "Device", mac: "MAC", ip: "IP", up: "Up", down: "Down" };
+const displayValue = (client, column) => ["up", "down"].includes(column)
+  ? `${client[column]} KB/s`
+  : client[column];
 const escapeHtml = value => String(value ?? "").replace(/[&<>"']/g, char => ({
   "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
 })[char]);
@@ -22,7 +25,7 @@ class TPLinkRouterClientsCard extends HTMLElement {
     const rows = mode === "compact"
       ? clients.map(client => `<div class="compact"><span>${escapeHtml(client.name)}</span><b>${client.down} KB/s ↓</b></div>`).join("")
       : `<table><thead><tr>${columns.map(column => `<th>${LABELS[column]}</th>`).join("")}</tr></thead><tbody>${clients.map(client =>
-          `<tr>${columns.map(column => `<td>${escapeHtml(client[column])}</td>`).join("")}</tr>`
+          `<tr>${columns.map(column => `<td>${escapeHtml(displayValue(client, column))}</td>`).join("")}</tr>`
         ).join("")}</tbody></table>`;
 
     this.innerHTML = `<ha-card header="${escapeHtml(this.config.title || "Router clients")}">

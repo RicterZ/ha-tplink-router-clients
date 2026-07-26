@@ -23,8 +23,8 @@ COLUMNS = [
     {"value": "name", "label": "Device"},
     {"value": "mac", "label": "MAC"},
     {"value": "ip", "label": "IP"},
-    {"value": "up", "label": "Up KB/s"},
-    {"value": "down", "label": "Down KB/s"},
+    {"value": "up", "label": "Up"},
+    {"value": "down", "label": "Down"},
 ]
 
 
