@@ -41,11 +41,12 @@ class TPLinkRouterClientsCard extends HTMLElement {
   static getStubConfig() { return { entity: "sensor.online_clients" }; }
 }
 
-customElements.define("tplink-router-clients-card", TPLinkRouterClientsCard);
+if (!customElements.get("tplink-router-clients-card")) {
+  customElements.define("tplink-router-clients-card", TPLinkRouterClientsCard);
+}
 window.customCards = window.customCards || [];
 window.customCards.push({
   type: "tplink-router-clients-card",
   name: "TP-Link Router Clients",
   description: "Online TP-Link router clients sorted by download speed"
 });
-

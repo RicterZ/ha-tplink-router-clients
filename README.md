@@ -16,13 +16,7 @@ The setup validates the login before saving. Later changes to the update interva
 
 ## Add the dashboard card
 
-Add this JavaScript module under **Settings → Dashboards → Resources**:
-
-```text
-/tplink_router_clients/tplink-router-clients-card.js
-```
-
-Then add a manual card:
+The integration loads the bundled card automatically. Add a manual card:
 
 ```yaml
 type: custom:tplink-router-clients-card
